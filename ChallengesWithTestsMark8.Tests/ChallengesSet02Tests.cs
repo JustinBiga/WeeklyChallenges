@@ -16,8 +16,8 @@ namespace ChallengesWithTestsMark8.Tests
             foreach (char letter in lowercaseAlphabet)
             {
                 // Act
-                bool lowercaseActual = challenger.CharacterIsALetter(letter);
-                bool uppercaseActual = challenger.CharacterIsALetter(char.ToUpper(letter));
+                bool lowercaseActual = ChallengesSet02.CharacterIsALetter(letter);
+                bool uppercaseActual = ChallengesSet02.CharacterIsALetter(char.ToUpper(letter));
 
                 // Assert
                 Assert.True(lowercaseActual);
@@ -36,7 +36,7 @@ namespace ChallengesWithTestsMark8.Tests
             foreach (char letter in nonLetters)
             {
                 // Act
-                bool actual = challenger.CharacterIsALetter(letter);
+                bool actual = ChallengesSet02.CharacterIsALetter(letter);
 
                 // Assert
                 Assert.False(actual);
@@ -133,7 +133,7 @@ namespace ChallengesWithTestsMark8.Tests
             ChallengesSet02 challenger = new ChallengesSet02();
 
             // Act
-            double actual = challenger.SumOfMinAndMax(numbers);
+            double actual = ChallengesSet02.SumOfMinAndMax(numbers);
 
             // Assert
             Assert.Equal(expected, actual);
